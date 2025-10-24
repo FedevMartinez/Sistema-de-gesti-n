@@ -1,10 +1,26 @@
+using Microsoft.EntityFrameworkCore;
+using Models.Context;
+using Repositories.Interface;
+using Repositories.Repository;
+using Services;
 using Sistema_de_gestión.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<SistemaContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Base")));
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddScoped<IProductRepository, ProductoRepository>();
+
+builder.Services.AddScoped<ProductoService>();
+builder.Services.AddScoped<AutoMapping>();
+builder.Services.AddScoped<AutoMapper.Mapper>();
+
+
 
 var app = builder.Build();
 

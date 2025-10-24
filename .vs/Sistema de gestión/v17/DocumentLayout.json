@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5F6510F3-C03D-47A5-9B55-811937F136C0}|Controllers\\Controllers.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\controllers\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F6510F3-C03D-47A5-9B55-811937F136C0}|Controllers\\Controllers.csproj|solutionrelative:controllers\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0BBDF70-46CA-4E31-A981-96D97F3F5A48}|Services\\Services.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\services\\mappers\\automapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0BBDF70-46CA-4E31-A981-96D97F3F5A48}|Services\\Services.csproj|solutionrelative:services\\mappers\\automapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2057785-51C6-4F38-9B9B-437306C1F388}|Models\\Models.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\models\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2057785-51C6-4F38-9B9B-437306C1F388}|Models\\Models.csproj|solutionrelative:models\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0250C0F-6B9E-45C5-A63E-2DC41132E948}|Sistema de gesti\u00F3n\\Sistema de gesti\u00F3n.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\sistema de gesti\u00F3n\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0250C0F-6B9E-45C5-A63E-2DC41132E948}|Sistema de gesti\u00F3n\\Sistema de gesti\u00F3n.csproj|solutionrelative:sistema de gesti\u00F3n\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0BBDF70-46CA-4E31-A981-96D97F3F5A48}|Services\\Services.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\services\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0BBDF70-46CA-4E31-A981-96D97F3F5A48}|Services\\Services.csproj|solutionrelative:services\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0250C0F-6B9E-45C5-A63E-2DC41132E948}|Sistema de gesti\u00F3n\\Sistema de gesti\u00F3n.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\sistema de gesti\u00F3n\\components\\pages\\producto.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D0250C0F-6B9E-45C5-A63E-2DC41132E948}|Sistema de gesti\u00F3n\\Sistema de gesti\u00F3n.csproj|solutionrelative:sistema de gesti\u00F3n\\components\\pages\\producto.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{107CAAFC-007A-4A49-956C-F1B29D82A62F}|Repository\\Repository.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\repository\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{107CAAFC-007A-4A49-956C-F1B29D82A62F}|Repository\\Repository.csproj|solutionrelative:repository\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0250C0F-6B9E-45C5-A63E-2DC41132E948}|Sistema de gesti\u00F3n\\Sistema de gesti\u00F3n.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\sistema de gesti\u00F3n\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D0250C0F-6B9E-45C5-A63E-2DC41132E948}|Sistema de gesti\u00F3n\\Sistema de gesti\u00F3n.csproj|solutionrelative:sistema de gesti\u00F3n\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,70 +26,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Controllers\\Class1.cs",
-              "RelativeDocumentMoniker": "Controllers\\Class1.cs",
-              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Controllers\\Class1.cs",
-              "RelativeToolTip": "Controllers\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T22:43:13.4Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Models\\Class1.cs",
-              "RelativeDocumentMoniker": "Models\\Class1.cs",
-              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Models\\Class1.cs",
-              "RelativeToolTip": "Models\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Sistema de gesti\u00F3n\\Program.cs",
+              "RelativeDocumentMoniker": "Sistema de gesti\u00F3n\\Program.cs",
+              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Sistema de gesti\u00F3n\\Program.cs",
+              "RelativeToolTip": "Sistema de gesti\u00F3n\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T22:43:02.922Z",
+              "WhenOpened": "2025-10-24T03:06:24.757Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Services\\Class1.cs",
-              "RelativeDocumentMoniker": "Services\\Class1.cs",
-              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Services\\Class1.cs",
-              "RelativeToolTip": "Services\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T22:41:11.686Z",
+              "Title": "Producto.razor",
+              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Sistema de gesti\u00F3n\\Components\\Pages\\Producto.razor",
+              "RelativeDocumentMoniker": "Sistema de gesti\u00F3n\\Components\\Pages\\Producto.razor",
+              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Sistema de gesti\u00F3n\\Components\\Pages\\Producto.razor",
+              "RelativeToolTip": "Sistema de gesti\u00F3n\\Components\\Pages\\Producto.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-24T03:05:11.343Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Repository\\Class1.cs",
-              "RelativeDocumentMoniker": "Repository\\Class1.cs",
-              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Repository\\Class1.cs",
-              "RelativeToolTip": "Repository\\Class1.cs",
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Sistema de gesti\u00F3n\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Sistema de gesti\u00F3n\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Sistema de gesti\u00F3n\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Sistema de gesti\u00F3n\\Components\\Layout\\NavMenu.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-24T03:05:42.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AutoMapping.cs",
+              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Services\\Mappers\\AutoMapping.cs",
+              "RelativeDocumentMoniker": "Services\\Mappers\\AutoMapping.cs",
+              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Services\\Mappers\\AutoMapping.cs",
+              "RelativeToolTip": "Services\\Mappers\\AutoMapping.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T22:40:56.647Z",
+              "WhenOpened": "2025-10-24T03:04:50.344Z",
               "EditorCaption": ""
             }
           ]
