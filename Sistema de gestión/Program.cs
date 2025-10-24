@@ -13,7 +13,9 @@ builder.Services.AddDbContext<SistemaContext>(options =>
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-builder.Services.AddAutoMapper(typeof(Program));
+
+builder.Services.AddAutoMapper(typeof(AutoMapping));
+
 builder.Services.AddScoped<IProductRepository, ProductoRepository>();
 
 builder.Services.AddScoped<ProductoService>();

@@ -9,7 +9,7 @@ public class AutoMapping : Profile
     {
         CreateMap<Producto, ProductoViewModel>();
 
-        CreateMap<List<Producto>, List<ProductoViewModel>>();
+        //CreateMap<List<Producto>, List<ProductoViewModel>>();
     }
 }
 
