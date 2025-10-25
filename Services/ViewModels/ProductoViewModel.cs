@@ -1,4 +1,4 @@
-﻿namespace Sistema_de_gestión
+﻿namespace SistemaGestion
 {
 public class ProductoViewModel
 {

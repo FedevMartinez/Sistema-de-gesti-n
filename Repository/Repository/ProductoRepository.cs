@@ -1,4 +1,5 @@
-﻿using Models.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using Models.Context;
 using Models.Entities;
 using Repositories.Interface;
 using System;
@@ -25,12 +26,11 @@ namespace Repositories.Repository
             await _context.SaveChangesAsync();
 
             return producto;
-
         }
 
-        public List<Producto> Index()
+        public async Task<IEnumerable<Producto>> Index()
         {
-            return _context.Productos.ToList();
+            return await _context.Productos.ToListAsync();
         }
     }
 }

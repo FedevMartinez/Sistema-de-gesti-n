@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gestión\\Sistema de gestión\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SistemaGestion.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SistemaGestion.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gestión\\Sistema de gestión\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gestión\\Sistema de gestión\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gestión\\Sistema de gestión\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gestión\\Sistema de gestión\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SistemaGestion.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.SistemaGestion.props",
+      "PackagePath": "build\\SistemaGestion.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SistemaGestion.props",
+      "PackagePath": "buildMultiTargeting\\SistemaGestion.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.SistemaGestion.props",
+      "PackagePath": "buildTransitive\\SistemaGestion.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

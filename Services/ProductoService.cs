@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Models.Entities;
 using Repositories.Interface;
-using Sistema_de_gestión;
+using SistemaGestion;
 
 namespace Services
 {
@@ -21,13 +21,11 @@ namespace Services
             _mapper = mapper;
         }
 
-        public List<ProductoViewModel> Index()
+        public async Task<IEnumerable<ProductoViewModel>> GetAllAsync()
         {
-            var lista = _productRepository.Index();
+            var lista = await _productRepository.Index();
 
             return _mapper.Map<List<ProductoViewModel>>(lista);
-
-
         }
     }
 }

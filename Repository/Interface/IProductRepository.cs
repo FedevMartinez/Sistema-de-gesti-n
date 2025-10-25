@@ -10,6 +10,6 @@ namespace Repositories.Interface
     public interface IProductRepository
     {
         Task<Producto> Create(Producto producto);
-        List<Producto> Index();
+        Task<IEnumerable<Producto>> Index();
     }
 }

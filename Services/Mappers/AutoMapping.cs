@@ -1,7 +1,7 @@
 ﻿
 using AutoMapper;
 using Models.Entities;
-using Sistema_de_gestión;
+using SistemaGestion;
 
 public class AutoMapping : Profile
 {

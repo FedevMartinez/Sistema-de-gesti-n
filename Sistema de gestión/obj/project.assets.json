@@ -2922,9 +2922,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gestión\\Sistema de gestión\\Sistema de gestión.csproj",
-      "projectName": "Sistema_de_gestión",
-      "projectPath": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gestión\\Sistema de gestión\\Sistema de gestión.csproj",
+      "projectUniqueName": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gestión\\Sistema de gestión\\SistemaGestion.csproj",
+      "projectName": "SistemaGestion",
+      "projectPath": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gestión\\Sistema de gestión\\SistemaGestion.csproj",
       "packagesPath": "C:\\Users\\54113\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gestión\\Sistema de gestión\\obj\\",
       "projectStyle": "PackageReference",

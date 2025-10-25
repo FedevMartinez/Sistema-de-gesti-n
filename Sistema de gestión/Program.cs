@@ -3,7 +3,7 @@ using Models.Context;
 using Repositories.Interface;
 using Repositories.Repository;
 using Services;
-using Sistema_de_gestión.Components;
+using SistemaGestion.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 

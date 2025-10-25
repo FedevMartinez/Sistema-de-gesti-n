@@ -1,0 +1,24 @@
+﻿@page "/productos/create"
+@attribute [StreamRendering]
+@inject Services.ProductoService productoService
+
+<h3>Create</h3>
+
+<EditForm Model="producto">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+
+
+    <div class="mb-3">
+        <label class="form-label">Descripcion</label>
+        <InputText class="form-control" @bind-Value="producto.Descripcion"></InputText>
+        <ValidationMessage For="@(() => producto.Descripcion)"></ValidationMessage>
+    </div>
+
+
+    <a class="btn btn-warning" href="productos/index">Volver</a>
+</EditForm>
+
+
+@code{
+    ProductoViewModel producto = new ProductoViewModel();
+}
