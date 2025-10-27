@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\sistemadegestion\\views\\productos\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|solutionrelative:sistemadegestion\\views\\productos\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\sistemadegestion\\views\\productos\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|solutionrelative:sistemadegestion\\views\\productos\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{107CAAFC-007A-4A49-956C-F1B29D82A62F}|Repository\\Repositories.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\repository\\repository\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{107CAAFC-007A-4A49-956C-F1B29D82A62F}|Repository\\Repositories.csproj|solutionrelative:repository\\repository\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0BBDF70-46CA-4E31-A981-96D97F3F5A48}|Services\\Services.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\services\\viewmodels\\productoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0BBDF70-46CA-4E31-A981-96D97F3F5A48}|Services\\Services.csproj|solutionrelative:services\\viewmodels\\productoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\sistemadegestion\\views\\productos\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|solutionrelative:sistemadegestion\\views\\productos\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0BBDF70-46CA-4E31-A981-96D97F3F5A48}|Services\\Services.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\services\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0BBDF70-46CA-4E31-A981-96D97F3F5A48}|Services\\Services.csproj|solutionrelative:services\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\sistemadegestion\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|solutionrelative:sistemadegestion\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0BBDF70-46CA-4E31-A981-96D97F3F5A48}|Services\\Services.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\services\\viewmodels\\productoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0BBDF70-46CA-4E31-A981-96D97F3F5A48}|Services\\Services.csproj|solutionrelative:services\\viewmodels\\productoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{107CAAFC-007A-4A49-956C-F1B29D82A62F}|Repository\\Repositories.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\repository\\repository\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{107CAAFC-007A-4A49-956C-F1B29D82A62F}|Repository\\Repositories.csproj|solutionrelative:repository\\repository\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,32 +43,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\Productos\\Index.razor",
+              "RelativeDocumentMoniker": "SistemaDeGestion\\Views\\Productos\\Index.razor",
+              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\Productos\\Index.razor",
+              "RelativeToolTip": "SistemaDeGestion\\Views\\Productos\\Index.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T20:16:00.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductoService.cs",
+              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Services\\ProductoService.cs",
+              "RelativeDocumentMoniker": "Services\\ProductoService.cs",
+              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Services\\ProductoService.cs",
+              "RelativeToolTip": "Services\\ProductoService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAawCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T20:02:43.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Create.razor",
               "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\Productos\\Create.razor",
               "RelativeDocumentMoniker": "SistemaDeGestion\\Views\\Productos\\Create.razor",
               "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\Productos\\Create.razor",
               "RelativeToolTip": "SistemaDeGestion\\Views\\Productos\\Create.razor",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAFQAAABZAAAA",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-27T19:50:53.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\Productos\\Index.razor",
-              "RelativeDocumentMoniker": "SistemaDeGestion\\Views\\Productos\\Index.razor",
-              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\Productos\\Index.razor",
-              "RelativeToolTip": "SistemaDeGestion\\Views\\Productos\\Index.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-27T19:41:01.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "ProductoRepository.cs",
               "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Repository\\Repository\\ProductoRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repository\\ProductoRepository.cs",
@@ -72,24 +89,24 @@
               "RelativeToolTip": "Repository\\Repository\\ProductoRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T19:35:54.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T19:35:54.277Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "ProductoViewModel.cs",
               "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Services\\ViewModels\\ProductoViewModel.cs",
               "RelativeDocumentMoniker": "Services\\ViewModels\\ProductoViewModel.cs",
               "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Services\\ViewModels\\ProductoViewModel.cs",
               "RelativeToolTip": "Services\\ViewModels\\ProductoViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T19:12:19.882Z"
+              "WhenOpened": "2025-10-27T19:12:19.882Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Shared\\NavMenu.razor",
               "RelativeDocumentMoniker": "SistemaDeGestion\\Shared\\NavMenu.razor",
@@ -97,7 +114,8 @@
               "RelativeToolTip": "SistemaDeGestion\\Shared\\NavMenu.razor",
               "ViewState": "AQIAAAIAAAAAAAAAAADwvxkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-27T19:00:03.578Z"
+              "WhenOpened": "2025-10-27T19:00:03.578Z",
+              "EditorCaption": ""
             }
           ]
         }
