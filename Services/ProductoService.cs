@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Models.Entities;
 using Repositories.Interface;
 using SistemaGestion;
+using static System.Net.WebRequestMethods;
 
 namespace Services
 {
@@ -14,11 +16,13 @@ namespace Services
     {
         private readonly IProductRepository _productRepository;
         private readonly IMapper _mapper;
+        private readonly HttpClient _http;
 
-        public ProductoService(IProductRepository productRepository, IMapper mapper)
+        public ProductoService(IProductRepository productRepository, IMapper mapper, HttpClient http)
         {
             _productRepository = productRepository;
             _mapper = mapper;
+            _http = http;
         }
 
         public async Task<IEnumerable<ProductoViewModel>> GetAllAsync()
@@ -32,6 +36,28 @@ namespace Services
         {
             return await _productRepository.AddAsync(_mapper.Map<Producto>(producto));
         }
+        public async Task<DolarData?> ObtenerDolarAsync()
+        {
+            try
+            {
+                // Ejemplo: API pública del dólar blue
+                var oficialResponse = await _http.GetFromJsonAsync<DolarResponse>("https://dolarapi.com/v1/dolares/oficial");
+                var blueResponse = await _http.GetFromJsonAsync<DolarResponse>("https://dolarapi.com/v1/dolares/blue");
 
+                DolarData dolarData = new DolarData
+                {
+                    CompraBlue = blueResponse.Compra,
+                    VentaBlue = blueResponse.Venta,
+                    CompraOficial = oficialResponse.Compra,
+                    VentaOficial = oficialResponse.Venta,
+                };
+
+                return dolarData;
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }

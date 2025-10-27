@@ -4,10 +4,11 @@
 @inject Services.ProductoService productoService
 
 <PageTitle>PRODUCTOS</PageTitle>
+
 <button class="btn btn-success btn-sm mb-3" @onclick="AbrirModal">Nuevo producto</button>
 
 <!-- Modal -->
-<div class="modal fade show @(showModal ? "d-block" : "")" tabindex="-1" style="background-color: rgba(0,0,0,0.7);" >
+<div class="modal fade show @(showModal ? "d-block" : "")" tabindex="-1" style="background-color: rgba(0,0,0,0.7);">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
@@ -21,10 +22,8 @@
     </div>
 </div>
 
-
-
 <table class="table table-striped">
-    <thead>
+    <thead class="table-dark">
         <tr>
             <th>Descripción</th>
             <th>Costo ($AR)</th>
@@ -74,35 +73,76 @@
     </tbody>
 </table>
 
+<!-- Footer pegado al fondo del contenido principal -->
+<footer class="text-muted w-100" style="
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+">
+    <div class="d-flex align-items-center gap-4 flex-wrap text-secondary">
+        <span>
+            💵 <strong>Compra oficial:</strong> $@compraOficial?.ToString("N2")
+        </span>
+        <span>
+            💸 <strong>Venta oficial:</strong> $@ventaOficial?.ToString("N2")
+        </span>
+        <span>
+            💸 <strong>Compra blue:</strong> $@compraBlue?.ToString("N2")
+        </span>
+        <span>
+            💸 <strong>Venta blue:</strong> $@ventaBlue?.ToString("N2")
+        </span>
+        <span>
+            ⏰ @DateTime.Now.ToString("HH:mm")
+        </span>
+    </div>
+</footer>
+
+
+
+
 @code {
     private IEnumerable<ProductoViewModel> productos;
+    private DolarData? infoDolar;
+    private bool showModal = false;
+
+    private decimal? compraOficial;
+    private decimal? ventaOficial;
+    private decimal? compraBlue;
+    private decimal? ventaBlue;
 
     protected override async Task OnInitializedAsync()
     {
         productos = await productoService.GetAllAsync();
-    }
-}
 
-@code {
-    private bool showModal = false;
-
-    private void AbrirModal()
-    {
-        showModal = true;
+        await CargarDolar();
     }
 
-    private void CerrarModal()
-    {
-        showModal = false;
-    }
+    private void AbrirModal() => showModal = true;
+    private void CerrarModal() => showModal = false;
 
     private async Task ProductoGuardado()
     {
-        // Actualizamos la lista de productos
         productos = await productoService.GetAllAsync();
         showModal = false;
         StateHasChanged();
     }
+
+    private async Task CargarDolar()
+    {
+        infoDolar = await productoService.ObtenerDolarAsync();
+
+        compraOficial = infoDolar.CompraOficial;
+        ventaOficial = infoDolar.VentaOficial;
+        compraBlue = infoDolar.CompraBlue;
+        ventaBlue = infoDolar.VentaBlue;
+    }
 }
-
-

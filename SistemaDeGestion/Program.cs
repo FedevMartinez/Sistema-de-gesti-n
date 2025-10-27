@@ -21,6 +21,7 @@ builder.Services.AddAutoMapper(typeof(AutoMapping));
 
 builder.Services.AddScoped<IProductRepository, ProductoRepository>();
 
+builder.Services.AddHttpClient<ProductoService>();
 builder.Services.AddScoped<ProductoService>();
 builder.Services.AddScoped<AutoMapping>();
 builder.Services.AddScoped<AutoMapper.Mapper>();
