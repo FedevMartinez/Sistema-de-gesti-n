@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaDeGestion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+289314b5f42c58de4b94906e0560817f83d8a0f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e52700130389e48cc0272875f59770b92171fdb")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaDeGestion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaDeGestion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

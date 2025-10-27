@@ -1,7 +1,10 @@
-﻿namespace SistemaGestion
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SistemaGestion
 {
 public class ProductoViewModel
-{
+    {
+        [StringLength(6)]
         public string Descripcion { get; set; }
 
         public decimal? CostoPesos { get; set; }

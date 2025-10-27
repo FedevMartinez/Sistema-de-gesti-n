@@ -1,34 +1,31 @@
 ﻿@page "/productos/create"
 @using Microsoft.AspNetCore.Components.Forms
 @using SistemaGestion
+@using System.ComponentModel.DataAnnotations
 @inject Services.ProductoService ProductoService
 
 <h3>Nuevo Producto</h3>
 
 <EditForm Model="@producto" OnValidSubmit="GuardarAsync" FormName="ProductoForm">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
 
     <div class="row">
         <!-- Descripción -->
         <div class="col-md-6 mb-3">
             <label class="form-label">Descripción</label>
             <InputText class="form-control" @bind-Value="producto.Descripcion" />
-            <ValidationMessage For="@(() => producto.Descripcion)" />
+
         </div>
 
         <!-- Cantidad -->
         <div class="col-md-3 mb-3">
             <label class="form-label">Cantidad</label>
-            <InputNumber class="form-control" TValue="int?" @bind-Value="producto.Cantidad" />
-            <ValidationMessage For="@(() => producto.Cantidad)" />
+            <InputNumber class="form-control" @bind-Value="producto.Cantidad" />
         </div>
 
         <!-- Fecha de ingreso -->
         <div class="col-md-3 mb-3">
             <label class="form-label">Fecha de ingreso</label>
             <InputDate class="form-control" @bind-Value="producto.FechaIngreso" />
-            <ValidationMessage For="@(() => producto.FechaIngreso)" />
         </div>
     </div>
 
@@ -37,26 +34,22 @@
         <div class="col-md-3 mb-3">
             <label class="form-label">Costo (Pesos)</label>
             <InputNumber class="form-control" @bind-Value="producto.CostoPesos" />
-            <ValidationMessage For="@(() => producto.CostoPesos)" />
         </div>
 
         <div class="col-md-3 mb-3">
             <label class="form-label">Costo (Dólar)</label>
             <InputNumber class="form-control" @bind-Value="producto.CostoDolar" />
-            <ValidationMessage For="@(() => producto.CostoDolar)" />
         </div>
 
         <!-- Valores de venta -->
         <div class="col-md-3 mb-3">
             <label class="form-label">Valor Venta (Pesos)</label>
             <InputNumber class="form-control" @bind-Value="producto.ValorPesos" />
-            <ValidationMessage For="@(() => producto.ValorPesos)" />
         </div>
 
         <div class="col-md-3 mb-3">
             <label class="form-label">Valor Venta (Dólar)</label>
             <InputNumber class="form-control" @bind-Value="producto.ValorDolar" />
-            <ValidationMessage For="@(() => producto.ValorDolar)" />
         </div>
     </div>
 
@@ -65,20 +58,17 @@
         <div class="col-md-4 mb-3">
             <label class="form-label">Fecha de compra</label>
             <InputDate class="form-control" @bind-Value="producto.FechaCompra" />
-            <ValidationMessage For="@(() => producto.FechaCompra)" />
         </div>
 
         <div class="col-md-4 mb-3">
             <label class="form-label">Valor dólar al momento</label>
             <InputNumber class="form-control" @bind-Value="producto.ValorDolarMomentoCompra" />
-            <ValidationMessage For="@(() => producto.ValorDolarMomentoCompra)" />
         </div>
 
         <!-- Subcategoría -->
         <div class="col-md-4 mb-3">
             <label class="form-label">Subcategoría</label>
             <InputNumber class="form-control" @bind-Value="producto.SubCategoriaId" />
-            <ValidationMessage For="@(() => producto.SubCategoriaId)" />
         </div>
     </div>
 
@@ -87,20 +77,30 @@
         <div class="col-md-6 mb-3">
             <label class="form-label">Cliente / Proveedor ID</label>
             <InputNumber class="form-control" @bind-Value="producto.ClienteProveedorId" />
-            <ValidationMessage For="@(() => producto.ClienteProveedorId)" />
         </div>
     </div>
 
 
     <button class="btn btn-primary" type="submit">Guardar</button>
+    <button type="button" class="btn btn-secondary" @onclick="Cancelar">Cancelar</button>
+
 </EditForm>
 
 @code {
     private ProductoViewModel producto = new();
 
+    [Parameter] public EventCallback OnSaved { get; set; }
+    [Parameter] public EventCallback OnCancel { get; set; }
+
     private async Task GuardarAsync()
     {
         await ProductoService.CreateAsync(producto);
-        // Podés agregar un mensaje de éxito o redirección
+        await OnSaved.InvokeAsync();
+    }
+
+
+    private async Task Cancelar()
+    {
+        await OnCancel.InvokeAsync();
     }
 }

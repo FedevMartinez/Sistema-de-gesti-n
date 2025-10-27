@@ -4,6 +4,22 @@
 @inject Services.ProductoService productoService
 
 <PageTitle>PRODUCTOS</PageTitle>
+<button class="btn btn-success btn-sm mb-3" @onclick="AbrirModal">Nuevo producto</button>
+
+<!-- Modal -->
+<div class="modal fade show @(showModal ? "d-block" : "")" tabindex="-1" style="background-color: rgba(0,0,0,0.7);" >
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Crear Producto</h5>
+                <button type="button" class="btn-close" @onclick="CerrarModal"></button>
+            </div>
+            <div class="modal-body">
+                <Create OnSaved="ProductoGuardado" OnCancel="CerrarModal" />
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <a class="btn btn-success btn-sm mb-3" href="productos/create">Nuevo producto</a>
@@ -67,3 +83,27 @@
         productos = await productoService.GetAllAsync();
     }
 }
+
+@code {
+    private bool showModal = false;
+
+    private void AbrirModal()
+    {
+        showModal = true;
+    }
+
+    private void CerrarModal()
+    {
+        showModal = false;
+    }
+
+    private async Task ProductoGuardado()
+    {
+        // Actualizamos la lista de productos
+        productos = await productoService.GetAllAsync();
+        showModal = false;
+        StateHasChanged();
+    }
+}
+
+
