@@ -4,7 +4,7 @@
 @using System.ComponentModel.DataAnnotations
 @inject Services.ProductoService ProductoService
 
-<h3>Nuevo Producto</h3>
+<h3>@(producto.Id == 0 ? "Nuevo Producto" : "Editar Producto")</h3>
 
 <EditForm Model="@producto" OnValidSubmit="GuardarAsync" FormName="ProductoForm">
     <DataAnnotationsValidator />
@@ -96,17 +96,45 @@
 </EditForm>
 
 @code {
+    [Parameter] public ProductoViewModel? ProductoExistente { get; set; }
+
     private ProductoViewModel producto = new();
 
     [Parameter] public EventCallback OnSaved { get; set; }
     [Parameter] public EventCallback OnCancel { get; set; }
 
-    private async Task GuardarAsync()
+    protected override void OnParametersSet()
     {
-        await ProductoService.CreateAsync(producto);
-        await OnSaved.InvokeAsync();
+        // Si se pasa un producto existente, lo clonamos al modelo local
+        if (ProductoExistente != null)
+        {
+            producto = new ProductoViewModel
+                {
+                    Id = ProductoExistente.Id,
+                    Descripcion = ProductoExistente.Descripcion,
+                    Cantidad = ProductoExistente.Cantidad,
+                    FechaIngreso = ProductoExistente.FechaIngreso,
+                    CostoPesos = ProductoExistente.CostoPesos,
+                    CostoDolar = ProductoExistente.CostoDolar,
+                    ValorPesos = ProductoExistente.ValorPesos,
+                    ValorDolar = ProductoExistente.ValorDolar,
+                    FechaCompra = ProductoExistente.FechaCompra,
+                    ValorDolarMomentoCompra = ProductoExistente.ValorDolarMomentoCompra,
+                    SubCategoriaId = ProductoExistente.SubCategoriaId,
+                    ClienteProveedorId = ProductoExistente.ClienteProveedorId
+                };
+        }
     }
 
+    private async Task GuardarAsync()
+    {
+        if (producto.Id == 0)
+            await ProductoService.CreateAsync(producto);
+        else
+            await ProductoService.UpdateAsync(producto);
+
+        await OnSaved.InvokeAsync();
+    }
 
     private async Task Cancelar()
     {

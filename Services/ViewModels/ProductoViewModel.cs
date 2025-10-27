@@ -4,6 +4,7 @@ namespace SistemaGestion
 {
     public class ProductoViewModel
     {
+        public int Id { get; set; }
         [Required(ErrorMessage = "La descripción es obligatoria")]
         public string Descripcion { get; set; }
 

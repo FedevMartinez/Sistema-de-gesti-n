@@ -36,7 +36,21 @@ namespace Services
         {
             return await _productRepository.AddAsync(_mapper.Map<Producto>(producto));
         }
-        public async Task<DolarData?> ObtenerDolarAsync()
+        public async Task<ProductoViewModel> UpdateAsync(ProductoViewModel model)
+        {
+            // Mapeás el ViewModel a la entidad y la enviás al repo
+            var producto = _mapper.Map<Producto>(model);
+            var actualizado = await _productRepository.UpdateAsync(producto);
+
+            return _mapper.Map<ProductoViewModel>(actualizado);
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            await _productRepository.DeleteAsync(id);
+        }
+
+        public async Task<DolarData?> GetDolarAsync()
         {
             try
             {
