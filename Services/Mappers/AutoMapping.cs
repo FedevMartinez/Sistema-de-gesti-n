@@ -7,7 +7,7 @@ public class AutoMapping : Profile
 {
     public AutoMapping()
     {
-        CreateMap<Producto, ProductoViewModel>();
+        CreateMap<Producto, ProductoViewModel>().ReverseMap();
 
         //CreateMap<List<Producto>, List<ProductoViewModel>>();
     }

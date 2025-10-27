@@ -9,7 +9,7 @@ namespace Repositories.Interface
 {
     public interface IProductRepository
     {
-        Task<Producto> Create(Producto producto);
-        Task<IEnumerable<Producto>> Index();
+        Task<Producto> AddAsync(Producto producto);
+        Task<IEnumerable<Producto>> IndexAsync();
     }
 }

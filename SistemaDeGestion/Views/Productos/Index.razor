@@ -1,0 +1,69 @@
+﻿@page "/productos/index"
+@using SistemaGestion
+@attribute [StreamRendering]
+@inject Services.ProductoService productoService
+
+<PageTitle>PRODUCTOS</PageTitle>
+
+
+<a class="btn btn-success btn-sm mb-3" href="productos/create">Nuevo producto</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Descripción</th>
+            <th>Costo ($AR)</th>
+            <th>Costo (USD)</th>
+            <th>Valor ($AR)</th>
+            <th>Valor (USD)</th>
+            <th>Fecha de Compra</th>
+            <th>Dólar al Momento</th>
+            <th>Fecha de Ingreso</th>
+            <th>Cliente/Proveedor</th>
+            <th>Subcategoría</th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (productos == null)
+        {
+            <tr>
+                <td colspan="11" class="text-center">Cargando productos...</td>
+            </tr>
+        }
+        else if (!productos.Any())
+        {
+            <tr>
+                <td colspan="11" class="text-center">No hay productos cargados.</td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var p in productos)
+            {
+                <tr>
+                    <td>@p.Descripcion</td>
+                    <td>@p.CostoPesos?.ToString("N2")</td>
+                    <td>@p.CostoDolar?.ToString("N2")</td>
+                    <td>@p.ValorPesos?.ToString("N2")</td>
+                    <td>@p.ValorDolar?.ToString("N2")</td>
+                    <td>@p.FechaCompra?.ToShortDateString()</td>
+                    <td>@p.ValorDolarMomentoCompra</td>
+                    <td>@p.FechaIngreso?.ToShortDateString()</td>
+                    <td>@p.ClienteProveedorId</td>
+                    <td>@p.SubCategoriaId</td>
+                    <td>@p.Cantidad</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+@code {
+    private IEnumerable<ProductoViewModel> productos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        productos = await productoService.GetAllAsync();
+    }
+}

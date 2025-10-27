@@ -2,7 +2,7 @@
 {
 public class ProductoViewModel
 {
-        public string Descripcion { get; set; } = null!;
+        public string Descripcion { get; set; }
 
         public decimal? CostoPesos { get; set; }
 

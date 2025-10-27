@@ -19,7 +19,7 @@ namespace Repositories.Repository
             _context = context;
         }
 
-        public async Task <Producto> Create(Producto producto)
+        public async Task <Producto> AddAsync(Producto producto)
         {
              _context.Productos.Add(producto);
 
@@ -28,7 +28,7 @@ namespace Repositories.Repository
             return producto;
         }
 
-        public async Task<IEnumerable<Producto>> Index()
+        public async Task<IEnumerable<Producto>> IndexAsync()
         {
             return await _context.Productos.ToListAsync();
         }

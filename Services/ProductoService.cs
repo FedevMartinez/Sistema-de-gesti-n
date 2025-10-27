@@ -23,9 +23,16 @@ namespace Services
 
         public async Task<IEnumerable<ProductoViewModel>> GetAllAsync()
         {
-            var lista = await _productRepository.Index();
+            var lista = await _productRepository.IndexAsync();
 
             return _mapper.Map<List<ProductoViewModel>>(lista);
+        }
+
+        public async Task<Producto> CreateAsync(ProductoViewModel producto)
+        {
+            return await _productRepository.AddAsync(_mapper.Map<Producto>(producto));
+
+
         }
     }
 }
