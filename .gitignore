@@ -1,19 +1,49 @@
-# Visual Studio
+# Archivos y carpetas de Visual Studio
 .vs/
-*.suo
+.vscode/
 *.user
+*.suo
 *.userosscache
 *.sln.docstates
 
-# Build
+# Binarios y compilados
 bin/
 obj/
+Debug/
+Release/
+x64/
+x86/
 
-# Rider
-.idea/
-
-# Otros
-*.log
-*.pdb
-*.dll
+# Archivos temporales
 *.cache
+*.pdb
+*.log
+*.dbmdl
+*.dbproj.schemaview
+*.dbmdl
+*.jfm
+*.ncb
+*.aps
+*.ilk
+*.tlh
+*.tli
+
+# Paquetes NuGet
+*.nupkg
+packages/
+
+# Archivos generados por diseño
+DesignTimeBuild/
+_TestResults/
+*.coverage
+*.coveragexml
+
+# Archivos de publicación
+publish/
+*.Publish.xml
+
+# Archivos de usuario o sistema
+Thumbs.db
+Desktop.ini
+~$*
+*.tmp
