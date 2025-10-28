@@ -1,0 +1,146 @@
+﻿@page "/clienteproveedor/create"
+@using Microsoft.AspNetCore.Components.Forms
+@using Services.Services
+@using SistemaGestion
+@using SistemaGestion.Utils
+@inject ClienteProveedorService ClienteProveedorService
+
+<h3>@(clienteProveedor.Id == 0 ? "Nuevo Cliente / Proveedor" : "Editar Cliente / Proveedor")</h3>
+
+<EditForm Model="@clienteProveedor" OnValidSubmit="GuardarAsync" FormName="ClienteProveedorForm">
+    <DataAnnotationsValidator />
+
+    <div class="row">
+        <!-- Nombre -->
+        <div class="col-md-4 mb-3">
+            <label class="form-label">Nombre</label>
+            <InputText class="form-control" @bind-Value="clienteProveedor.Nombre" />
+            <ValidationMessage For="@(() => clienteProveedor.Nombre)" />
+        </div>
+
+        <!-- Apellido -->
+        <div class="col-md-4 mb-3">
+            <label class="form-label">Apellido</label>
+            <InputText class="form-control" @bind-Value="clienteProveedor.Apellido" />
+            <ValidationMessage For="@(() => clienteProveedor.Apellido)" />
+        </div>
+
+        <!-- Razón social -->
+        <div class="col-md-4 mb-3">
+            <label class="form-label">Razón Social</label>
+            <InputText class="form-control" @bind-Value="clienteProveedor.RazonSocial" />
+            <ValidationMessage For="@(() => clienteProveedor.RazonSocial)" />
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- CUIT -->
+        <div class="col-md-4 mb-3">
+            <label class="form-label">CUIT</label>
+            <InputText class="form-control" @bind-Value="clienteProveedor.Cuit" />
+            <ValidationMessage For="@(() => clienteProveedor.Cuit)" />
+        </div>
+
+        <!-- Teléfono -->
+        <div class="col-md-4 mb-3">
+            <label class="form-label">Teléfono</label>
+            <InputText class="form-control" @bind-Value="clienteProveedor.Telefono" />
+            <ValidationMessage For="@(() => clienteProveedor.Telefono)" />
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-4 mb-3">
+            <label class="form-label">Email</label>
+            <InputText class="form-control" @bind-Value="clienteProveedor.Email" />
+            <ValidationMessage For="@(() => clienteProveedor.Email)" />
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Dirección -->
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Dirección</label>
+            <InputText class="form-control" @bind-Value="clienteProveedor.Direccion" />
+            <ValidationMessage For="@(() => clienteProveedor.Direccion)" />
+        </div>
+
+        <!-- Localidad -->
+        <div class="col-md-3 mb-3">
+            <label class="form-label">Localidad</label>
+            <InputText class="form-control" @bind-Value="clienteProveedor.Localidad" />
+            <ValidationMessage For="@(() => clienteProveedor.Localidad)" />
+        </div>
+
+        <!-- Provincia -->
+        <div class="col-md-3 mb-3">
+            <label class="form-label">Provincia</label>
+            <InputText class="form-control" @bind-Value="clienteProveedor.Provincia" />
+            <ValidationMessage For="@(() => clienteProveedor.Provincia)" />
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Código postal -->
+        <div class="col-md-4 mb-3">
+            <label class="form-label">Código Postal</label>
+            <InputText class="form-control" @bind-Value="clienteProveedor.CodigoPostal" />
+            <ValidationMessage For="@(() => clienteProveedor.CodigoPostal)" />
+        </div>
+
+        <!-- Fecha de alta -->
+        <div class="col-md-4 mb-3">
+            <label class="form-label">Fecha de Alta</label>
+            <InputDate class="form-control" @bind-Value="clienteProveedor.FechaAlta" />
+            <ValidationMessage For="@(() => clienteProveedor.FechaAlta)" />
+        </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Guardar</button>
+    <button type="button" class="btn btn-secondary" @onclick="Cancelar">Cancelar</button>
+</EditForm>
+
+@code {
+    [Parameter] public ClienteProveedorViewModel? ClienteProveedorExistente { get; set; }
+
+    private ClienteProveedorViewModel clienteProveedor = new();
+
+    [Parameter] public EventCallback OnSaved { get; set; }
+    [Parameter] public EventCallback OnCancel { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        if (ClienteProveedorExistente != null)
+        {
+            clienteProveedor = new ClienteProveedorViewModel
+                {
+                    Id = ClienteProveedorExistente.Id,
+                    Nombre = ClienteProveedorExistente.Nombre,
+                    Apellido = ClienteProveedorExistente.Apellido,
+                    RazonSocial = ClienteProveedorExistente.RazonSocial,
+                    Cuit = ClienteProveedorExistente.Cuit,
+                    Telefono = ClienteProveedorExistente.Telefono,
+                    Email = ClienteProveedorExistente.Email,
+                    Direccion = ClienteProveedorExistente.Direccion,
+                    Localidad = ClienteProveedorExistente.Localidad,
+                    Provincia = ClienteProveedorExistente.Provincia,
+                    CodigoPostal = ClienteProveedorExistente.CodigoPostal,
+                    FechaAlta = ClienteProveedorExistente.FechaAlta
+                };
+        }
+    }
+
+    private async Task GuardarAsync()
+    {
+        if (clienteProveedor.Id == 0)
+            await ClienteProveedorService.CreateAsync(clienteProveedor);
+        else
+            await ClienteProveedorService.UpdateAsync(clienteProveedor);
+
+        await OnSaved.InvokeAsync();
+    }
+
+    private async Task Cancelar()
+    {
+        await OnCancel.InvokeAsync();
+    }
+}

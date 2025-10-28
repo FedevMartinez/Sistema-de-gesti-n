@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D0BBDF70-46CA-4E31-A981-96D97F3F5A48}|Services\\Services.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\services\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0BBDF70-46CA-4E31-A981-96D97F3F5A48}|Services\\Services.csproj|solutionrelative:services\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\sistemadegestion\\views\\products\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|solutionrelative:sistemadegestion\\views\\products\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\sistemadegestion\\views\\clienteproveedors\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|solutionrelative:sistemadegestion\\views\\clienteproveedors\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\sistemadegestion\\shared\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|solutionrelative:sistemadegestion\\shared\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\sistemadegestion\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|solutionrelative:sistemadegestion\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107CAAFC-007A-4A49-956C-F1B29D82A62F}|Repository\\Repositories.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\repository\\repository\\clienteproveedorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{107CAAFC-007A-4A49-956C-F1B29D82A62F}|Repository\\Repositories.csproj|solutionrelative:repository\\repository\\clienteproveedorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{107CAAFC-007A-4A49-956C-F1B29D82A62F}|Repository\\Repositories.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\repository\\repository\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{107CAAFC-007A-4A49-956C-F1B29D82A62F}|Repository\\Repositories.csproj|solutionrelative:repository\\repository\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\sistemadegestion\\views\\productos\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|solutionrelative:sistemadegestion\\views\\productos\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{107CAAFC-007A-4A49-956C-F1B29D82A62F}|Repository\\Repositories.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\repository\\interface\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{107CAAFC-007A-4A49-956C-F1B29D82A62F}|Repository\\Repositories.csproj|solutionrelative:repository\\interface\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|c:\\users\\54113\\onedrive\\escritorio\\proyectos\\sistema de gesti\u00F3n\\sistemadegestion\\views\\productos\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F1C5E5D7-6B9A-4A6A-B589-3202429790FB}|SistemaDeGestion\\SistemaDeGestion.csproj|solutionrelative:sistemadegestion\\views\\productos\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,75 +34,88 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Repository\\Interface\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Interface\\IProductRepository.cs",
-              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Repository\\Interface\\IProductRepository.cs",
-              "RelativeToolTip": "Repository\\Interface\\IProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA0AAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T22:59:43.162Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Repository\\Repository\\ProductoRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repository\\ProductoRepository.cs",
-              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Repository\\Repository\\ProductoRepository.cs",
-              "RelativeToolTip": "Repository\\Repository\\ProductoRepository.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAwwEMAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T22:59:46.656Z",
+              "DocumentIndex": 2,
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Shared\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "SistemaDeGestion\\Shared\\NavMenu.razor.css",
+              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Shared\\NavMenu.razor.css",
+              "RelativeToolTip": "SistemaDeGestion\\Shared\\NavMenu.razor.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-28T17:52:04.728Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Create.razor",
-              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\Productos\\Create.razor",
-              "RelativeDocumentMoniker": "SistemaDeGestion\\Views\\Productos\\Create.razor",
-              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\Productos\\Create.razor",
-              "RelativeToolTip": "SistemaDeGestion\\Views\\Productos\\Create.razor",
-              "ViewState": "AQIAAG0AAAAAAAAAAAAjwIAAAAAlAAAA",
+              "DocumentIndex": 3,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Shared\\NavMenu.razor",
+              "RelativeDocumentMoniker": "SistemaDeGestion\\Shared\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Shared\\NavMenu.razor",
+              "RelativeToolTip": "SistemaDeGestion\\Shared\\NavMenu.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-27T22:49:16.423Z",
+              "WhenOpened": "2025-10-28T17:51:57.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductoService.cs",
-              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Services\\ProductoService.cs",
-              "RelativeDocumentMoniker": "Services\\ProductoService.cs",
-              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Services\\ProductoService.cs",
-              "RelativeToolTip": "Services\\ProductoService.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAiwDAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T22:46:18.253Z",
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\Products\\Index.razor",
+              "RelativeDocumentMoniker": "SistemaDeGestion\\Views\\Products\\Index.razor",
+              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\Products\\Index.razor",
+              "RelativeToolTip": "SistemaDeGestion\\Views\\Products\\Index.razor",
+              "ViewState": "AQIAAHoAAAAAAAAAAAArwJwAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-28T17:47:37.477Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\Productos\\Index.razor",
-              "RelativeDocumentMoniker": "SistemaDeGestion\\Views\\Productos\\Index.razor",
-              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\Productos\\Index.razor",
-              "RelativeToolTip": "SistemaDeGestion\\Views\\Productos\\Index.razor",
-              "ViewState": "AQIAAJkAAAAAAAAAAAAAALQAAAAtAAAA",
+              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\ClienteProveedors\\Index.razor",
+              "RelativeDocumentMoniker": "SistemaDeGestion\\Views\\ClienteProveedors\\Index.razor",
+              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\SistemaDeGestion\\Views\\ClienteProveedors\\Index.razor",
+              "RelativeToolTip": "SistemaDeGestion\\Views\\ClienteProveedors\\Index.razor",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAlwHkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-27T22:45:47.344Z",
+              "WhenOpened": "2025-10-28T17:45:06.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Repository\\Repository\\ProductoRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repository\\ProductoRepository.cs",
+              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Repository\\Repository\\ProductoRepository.cs",
+              "RelativeToolTip": "Repository\\Repository\\ProductoRepository.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T17:42:19.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClienteProveedorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Repository\\Repository\\ClienteProveedorRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repository\\ClienteProveedorRepository.cs",
+              "ToolTip": "C:\\Users\\54113\\OneDrive\\Escritorio\\Proyectos\\Sistema de gesti\u00F3n\\Repository\\Repository\\ClienteProveedorRepository.cs",
+              "RelativeToolTip": "Repository\\Repository\\ClienteProveedorRepository.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAnwCQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T17:41:53.502Z",
               "EditorCaption": ""
             }
           ]

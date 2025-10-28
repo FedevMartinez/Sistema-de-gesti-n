@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SistemaGestion
+namespace SistemaGestion.Utils
 {
     public class ProductoViewModel
     {

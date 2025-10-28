@@ -8,9 +8,10 @@ using AutoMapper;
 using Models.Entities;
 using Repositories.Interface;
 using SistemaGestion;
+using SistemaGestion.Utils;
 using static System.Net.WebRequestMethods;
 
-namespace Services
+namespace Services.Services
 {
     public class ProductoService
     {

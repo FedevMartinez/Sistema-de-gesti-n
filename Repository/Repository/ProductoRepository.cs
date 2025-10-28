@@ -30,7 +30,7 @@ namespace Repositories.Repository
         public async Task<Producto> UpdateAsync(Producto producto)
         {
             // Buscar el producto existente desde el contexto (ya trackeado)
-            var existente = await _context.Productos.FindAsync(producto.Id);
+            var existente = await GetByIdAsync(producto.Id);
             if (existente == null)
                 throw new Exception($"No se encontró el producto con Id {producto.Id}");
 
@@ -61,13 +61,12 @@ namespace Repositories.Repository
         public async Task<Producto?> GetByIdAsync(int id)
         {
             return await _context.Productos
-                .AsNoTracking() // 👈 importantísimo para evitar el tracking doble
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
 
         public async Task DeleteAsync(int id)
         {
-            var producto = await _context.Productos.FindAsync(id);
+            var producto = await GetByIdAsync(id);
             if (producto == null)
                 throw new Exception($"No se encontró el producto con Id {id}");
 

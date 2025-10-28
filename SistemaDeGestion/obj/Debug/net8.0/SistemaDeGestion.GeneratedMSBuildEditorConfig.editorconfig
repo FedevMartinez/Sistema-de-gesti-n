@@ -38,12 +38,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/54113/OneDrive/Escritorio/Proyectos/Sistema de gestión/SistemaDeGestion/Views/Productos/Create.razor]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXENyZWF0ZS5yYXpvcg==
+[C:/Users/54113/OneDrive/Escritorio/Proyectos/Sistema de gestión/SistemaDeGestion/Views/ClienteProveedors/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVByb3ZlZWRvcnNcQ3JlYXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/54113/OneDrive/Escritorio/Proyectos/Sistema de gestión/SistemaDeGestion/Views/Productos/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEluZGV4LnJhem9y
+[C:/Users/54113/OneDrive/Escritorio/Proyectos/Sistema de gestión/SistemaDeGestion/Views/ClienteProveedors/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVByb3ZlZWRvcnNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/54113/OneDrive/Escritorio/Proyectos/Sistema de gestión/SistemaDeGestion/Views/Products/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/54113/OneDrive/Escritorio/Proyectos/Sistema de gestión/SistemaDeGestion/Views/Products/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/54113/OneDrive/Escritorio/Proyectos/Sistema de gestión/SistemaDeGestion/_Imports.razor]

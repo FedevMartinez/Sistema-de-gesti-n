@@ -1,0 +1,174 @@
+﻿@page "/clienteproveedor/index"
+@using Services.Services
+@using SistemaGestion
+@using SistemaGestion.Utils
+@attribute [StreamRendering]
+@inject ClienteProveedorService clienteProveedorService
+
+<PageTitle>CLIENTES / PROVEEDORES</PageTitle>
+
+<button class="btn btn-success btn-sm mb-3" @onclick="AbrirModal">Nuevo cliente / proveedor</button>
+
+<!-- Modal de creación/edición -->
+<div class="modal fade show @(showModal ? "d-block" : "")" tabindex="-1" style="background-color: rgba(0,0,0,0.7);">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@(modoEdicion ? "Editar Cliente / Proveedor" : "Crear Cliente / Proveedor")</h5>
+                <button type="button" class="btn-close" @onclick="CerrarModal"></button>
+            </div>
+            <div class="modal-body">
+                <Create ClienteProveedorExistente="clienteProveedorSeleccionado"
+                        OnSaved="ClienteProveedorGuardado"
+                        OnCancel="CerrarModal" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Razón Social</th>
+            <th>CUIT</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Dirección</th>
+            <th>Localidad</th>
+            <th>Provincia</th>
+            <th>Código Postal</th>
+            <th>Fecha Alta</th>
+            <th style="width:130px;">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (clientesProveedores == null)
+        {
+            <tr>
+                <td colspan="12" class="text-center">Cargando datos...</td>
+            </tr>
+        }
+        else if (!clientesProveedores.Any())
+        {
+            <tr>
+                <td colspan="12" class="text-center">No hay registros cargados.</td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var c in clientesProveedores)
+            {
+                <tr>
+                    <td>@c.Nombre</td>
+                    <td>@c.Apellido</td>
+                    <td>@c.RazonSocial</td>
+                    <td>@c.Cuit</td>
+                    <td>@c.Telefono</td>
+                    <td>@c.Email</td>
+                    <td>@c.Direccion</td>
+                    <td>@c.Localidad</td>
+                    <td>@c.Provincia</td>
+                    <td>@c.CodigoPostal</td>
+                    <td>@c.FechaAlta?.ToShortDateString()</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning me-1" @onclick="() => EditarClienteProveedor(c.Id)">
+                            <i class="bi bi-pencil-square"></i> Editar
+                        </button>
+                        <button class="btn btn-sm btn-danger" @onclick="() => EliminarClienteProveedor(c.Id)">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<!-- Modal de confirmación -->
+<div class="modal fade show @(showConfirmModal ? "d-block" : "")" tabindex="-1" style="background-color: rgba(0,0,0,0.6);">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">Confirmar eliminación</h5>
+                <button type="button" class="btn-close" @onclick="CancelarEliminacion"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Seguro que desea eliminar el registro <strong>@nombreAEliminar</strong>?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" @onclick="CancelarEliminacion">Cancelar</button>
+                <button class="btn btn-danger" @onclick="ConfirmarEliminacion">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private IEnumerable<ClienteProveedorViewModel> clientesProveedores;
+    private bool showModal = false;
+    private bool modoEdicion = false;
+    private ClienteProveedorViewModel? clienteProveedorSeleccionado;
+    private bool showConfirmModal = false;
+    private int clienteProveedorIdAEliminar;
+    private string? nombreAEliminar;
+
+    protected override async Task OnInitializedAsync()
+    {
+        clientesProveedores = await clienteProveedorService.GetAllAsync();
+    }
+
+    private void AbrirModal()
+    {
+        modoEdicion = false;
+        clienteProveedorSeleccionado = null;
+        showModal = false;
+
+        // 🔥 Forzar recreación del componente Create
+        clienteProveedorSeleccionado = new ClienteProveedorViewModel();
+
+        // Mostrar el modal
+        showModal = true;
+    }
+
+
+    private void CerrarModal() => showModal = false;
+
+    private async Task ClienteProveedorGuardado()
+    {
+        clientesProveedores = await clienteProveedorService.GetAllAsync();
+        showModal = false;
+        StateHasChanged();
+    }
+
+    private void EditarClienteProveedor(int id)
+    {
+        clienteProveedorSeleccionado = clientesProveedores.FirstOrDefault(c => c.Id == id);
+        modoEdicion = true;
+        showModal = true;
+    }
+
+    private void EliminarClienteProveedor(int id)
+    {
+        var cliente = clientesProveedores.FirstOrDefault(c => c.Id == id);
+        if (cliente == null) return;
+
+        clienteProveedorIdAEliminar = id;
+        nombreAEliminar = $"{cliente.Nombre} {cliente.Apellido} ({cliente.RazonSocial})";
+        showConfirmModal = true;
+    }
+
+    private async Task ConfirmarEliminacion()
+    {
+        await clienteProveedorService.DeleteAsync(clienteProveedorIdAEliminar);
+        clientesProveedores = await clienteProveedorService.GetAllAsync();
+        showConfirmModal = false;
+        StateHasChanged();
+    }
+
+    private void CancelarEliminacion()
+    {
+        showConfirmModal = false;
+    }
+}

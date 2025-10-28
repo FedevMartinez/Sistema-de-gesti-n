@@ -1,7 +1,9 @@
 ﻿@page "/productos/index"
+@using Services.Services;
 @using SistemaGestion
+@using SistemaGestion.Utils
 @attribute [StreamRendering]
-@inject Services.ProductoService productoService
+@inject ProductoService productoService
 
 <PageTitle>PRODUCTOS</PageTitle>
 
@@ -149,6 +151,12 @@
     {
         modoEdicion = false;
         productoSeleccionado = null;
+        showModal = false;
+
+        // 🔥 Forzar recreación del componente Create
+        productoSeleccionado = new ProductoViewModel();
+
+        // Mostrar el modal
         showModal = true;
     }
 

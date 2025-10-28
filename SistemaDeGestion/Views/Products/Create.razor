@@ -1,8 +1,10 @@
 ﻿@page "/productos/create"
+@using Services.Services
+@using SistemaGestion.Utils
 @using Microsoft.AspNetCore.Components.Forms
 @using SistemaGestion
 @using System.ComponentModel.DataAnnotations
-@inject Services.ProductoService ProductoService
+@inject ProductoService ProductoService
 
 <h3>@(producto.Id == 0 ? "Nuevo Producto" : "Editar Producto")</h3>
 

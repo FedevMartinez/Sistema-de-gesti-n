@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Models.Context;
 using Repositories.Interface;
 using Repositories.Repository;
-using Services;
+using Services.Services;
 using SistemaDeGestion.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,9 +20,11 @@ builder.Services.AddRazorComponents()
 builder.Services.AddAutoMapper(typeof(AutoMapping));
 
 builder.Services.AddScoped<IProductRepository, ProductoRepository>();
+builder.Services.AddScoped<IClienteProveedorRepository, ClienteProveedorRepository>();
 
 builder.Services.AddHttpClient<ProductoService>();
 builder.Services.AddScoped<ProductoService>();
+builder.Services.AddScoped<ClienteProveedorService>();
 builder.Services.AddScoped<AutoMapping>();
 builder.Services.AddScoped<AutoMapper.Mapper>();
 
