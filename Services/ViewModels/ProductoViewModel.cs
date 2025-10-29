@@ -31,8 +31,9 @@ namespace SistemaGestion.Utils
         [Range(0.01, double.MaxValue, ErrorMessage = "El valor del dólar al momento debe ser mayor a 0")]
         public decimal? ValorDolarMomentoCompra { get; set; }
 
-        [Range(1, int.MaxValue, ErrorMessage = "Debe seleccionar una subcategoría")]
         public int? SubCategoriaId { get; set; }
+
+        public int? CategoriaId { get; set; }
 
         [Range(1, int.MaxValue, ErrorMessage = "Debe seleccionar un cliente/proveedor")]
         public int? ClienteProveedorId { get; set; }

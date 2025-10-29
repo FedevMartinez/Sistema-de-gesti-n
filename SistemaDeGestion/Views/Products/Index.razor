@@ -1,9 +1,11 @@
 ﻿@page "/productos/index"
 @using Services.Services;
+@using Services.ViewModels
 @using SistemaGestion
 @using SistemaGestion.Utils
 @attribute [StreamRendering]
 @inject ProductoService productoService
+@inject CategoriaService categoriaService
 
 <PageTitle>PRODUCTOS</PageTitle>
 
@@ -19,6 +21,7 @@
             </div>
             <div class="modal-body">
                 <Create ProductoExistente="productoSeleccionado"
+                        Categorias="categorias"
                         OnSaved="ProductoGuardado"
                         OnCancel="CerrarModal" />
             </div>
@@ -128,6 +131,7 @@
 
 @code {
     private IEnumerable<ProductoViewModel> productos;
+    private IEnumerable<CategoriaViewModel> categorias = new List<CategoriaViewModel>();
     private DolarData? infoDolar;
     private bool showModal = false;
     private bool modoEdicion = false;
@@ -144,6 +148,7 @@
     protected override async Task OnInitializedAsync()
     {
         productos = await productoService.GetAllAsync();
+        categorias = await categoriaService.GetAllAsync();
         await CargarDolar();
     }
 
