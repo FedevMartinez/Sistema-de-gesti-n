@@ -1,0 +1,156 @@
+﻿@page "/subcategoria/index"
+@using Services.Services
+@using Services.ViewModels
+@using SistemaGestion.Utils
+@attribute [StreamRendering]
+@inject SubCategoriaService subCategoriaService
+@inject CategoriaService categoriaService
+
+<PageTitle>SUBCATEGORÍAS</PageTitle>
+
+<button class="btn btn-success btn-sm mb-3" @onclick="AbrirModal">Nueva Subcategoría</button>
+
+<!-- Modal de creación/edición -->
+<div class="modal fade show @(showModal ? "d-block" : "")" tabindex="-1" style="background-color: rgba(0,0,0,0.7);">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@(modoEdicion ? "Editar Subcategoría" : "Nueva Subcategoría")</h5>
+                <button type="button" class="btn-close" @onclick="CerrarModal"></button>
+            </div>
+            <div class="modal-body">
+                <Create SubCategoriaExistente="subCategoriaSeleccionada"
+                        Categorias="categorias"
+                        OnSaved="SubCategoriaGuardada"
+                        OnCancel="CerrarModal" />
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Descripción</th>
+            <th>Código</th>
+            <th>Categoría</th>
+            <th style="width:130px;">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (subCategorias == null)
+        {
+            <tr>
+                <td colspan="4" class="text-center">Cargando datos...</td>
+            </tr>
+        }
+        else if (!subCategorias.Any())
+        {
+            <tr>
+                <td colspan="4" class="text-center">No hay registros cargados.</td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var s in subCategorias)
+            {
+                <tr>
+                    <td>@s.Descripcion</td>
+                    <td>@s.Codigo</td>
+                    <td>@categorias.FirstOrDefault(c => c.Id == s.CategoriaId)?.Descripcion</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning me-1" @onclick="() => EditarSubCategoria(s.Id)">
+                            <i class="bi bi-pencil-square"></i> Editar
+                        </button>
+                        <button class="btn btn-sm btn-danger" @onclick="() => EliminarSubCategoria(s.Id)">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<!-- Modal de confirmación -->
+<div class="modal fade show @(showConfirmModal ? "d-block" : "")" tabindex="-1" style="background-color: rgba(0,0,0,0.6);">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">Confirmar eliminación</h5>
+                <button type="button" class="btn-close" @onclick="CancelarEliminacion"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Seguro que desea eliminar la subcategoría <strong>@nombreAEliminar</strong>?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" @onclick="CancelarEliminacion">Cancelar</button>
+                <button class="btn btn-danger" @onclick="ConfirmarEliminacion">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private IEnumerable<SubCategoriaViewModel>? subCategorias;
+    private IEnumerable<CategoriaViewModel> categorias = new List<CategoriaViewModel>();
+    private bool showModal = false;
+    private bool modoEdicion = false;
+    private SubCategoriaViewModel? subCategoriaSeleccionada;
+    private bool showConfirmModal = false;
+    private int subCategoriaIdAEliminar;
+    private string? nombreAEliminar;
+
+    protected override async Task OnInitializedAsync()
+    {
+        subCategorias = await subCategoriaService.GetAllAsync();
+        categorias = await categoriaService.GetAllAsync();
+    }
+
+    private void AbrirModal()
+    {
+        modoEdicion = false;
+        subCategoriaSeleccionada = new SubCategoriaViewModel();
+        showModal = true;
+    }
+
+    private void CerrarModal() => showModal = false;
+
+    private async Task SubCategoriaGuardada()
+    {
+        subCategorias = await subCategoriaService.GetAllAsync();
+        showModal = false;
+        StateHasChanged();
+    }
+
+    private void EditarSubCategoria(int id)
+    {
+        subCategoriaSeleccionada = subCategorias?.FirstOrDefault(s => s.Id == id);
+        modoEdicion = true;
+        showModal = true;
+    }
+
+    private void EliminarSubCategoria(int id)
+    {
+        var sub = subCategorias?.FirstOrDefault(s => s.Id == id);
+        if (sub == null) return;
+
+        subCategoriaIdAEliminar = id;
+        nombreAEliminar = sub.Descripcion;
+        showConfirmModal = true;
+    }
+
+    private async Task ConfirmarEliminacion()
+    {
+        await subCategoriaService.DeleteAsync(subCategoriaIdAEliminar);
+        subCategorias = await subCategoriaService.GetAllAsync();
+        showConfirmModal = false;
+        StateHasChanged();
+    }
+
+    private void CancelarEliminacion()
+    {
+        showConfirmModal = false;
+    }
+}

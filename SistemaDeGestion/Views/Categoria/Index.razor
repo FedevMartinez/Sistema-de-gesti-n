@@ -1,0 +1,149 @@
+﻿@page "/categoria/index"
+@using Services.Services
+@using Services.ViewModels
+@using SistemaGestion.Utils
+@attribute [StreamRendering]
+@inject CategoriaService categoriaService
+
+<PageTitle>CATEGORÍAS</PageTitle>
+
+<button class="btn btn-success btn-sm mb-3" @onclick="AbrirModal">Nueva Categoría</button>
+
+<!-- Modal de creación/edición -->
+<div class="modal fade show @(showModal ? "d-block" : "")" tabindex="-1" style="background-color: rgba(0,0,0,0.7);">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@(modoEdicion ? "Editar Categoría" : "Nueva Categoría")</h5>
+                <button type="button" class="btn-close" @onclick="CerrarModal"></button>
+            </div>
+            <div class="modal-body">
+                <Create CategoriaExistente="categoriaSeleccionada"
+                        OnSaved="CategoriaGuardada"
+                        OnCancel="CerrarModal" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Descripción</th>
+            <th>Código</th>
+            <th style="width:130px;">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (categorias == null)
+        {
+            <tr>
+                <td colspan="3" class="text-center">Cargando datos...</td>
+            </tr>
+        }
+        else if (!categorias.Any())
+        {
+            <tr>
+                <td colspan="3" class="text-center">No hay registros cargados.</td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var c in categorias)
+            {
+                <tr>
+                    <td>@c.Descripcion</td>
+                    <td>@c.Codigo</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning me-1" @onclick="() => EditarCategoria(c.Id)">
+                            <i class="bi bi-pencil-square"></i> Editar
+                        </button>
+                        <button class="btn btn-sm btn-danger" @onclick="() => EliminarCategoria(c.Id)">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<!-- Modal de confirmación -->
+<div class="modal fade show @(showConfirmModal ? "d-block" : "")" tabindex="-1" style="background-color: rgba(0,0,0,0.6);">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">Confirmar eliminación</h5>
+                <button type="button" class="btn-close" @onclick="CancelarEliminacion"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Seguro que desea eliminar la categoría <strong>@nombreAEliminar</strong>?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" @onclick="CancelarEliminacion">Cancelar</button>
+                <button class="btn btn-danger" @onclick="ConfirmarEliminacion">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private IEnumerable<CategoriaViewModel>? categorias;
+    private bool showModal = false;
+    private bool modoEdicion = false;
+    private CategoriaViewModel? categoriaSeleccionada;
+    private bool showConfirmModal = false;
+    private int categoriaIdAEliminar;
+    private string? nombreAEliminar;
+
+    protected override async Task OnInitializedAsync()
+    {
+        categorias = await categoriaService.GetAllAsync();
+    }
+
+    private void AbrirModal()
+    {
+        modoEdicion = false;
+        categoriaSeleccionada = new CategoriaViewModel();
+        showModal = true;
+    }
+
+    private void CerrarModal() => showModal = false;
+
+    private async Task CategoriaGuardada()
+    {
+        categorias = await categoriaService.GetAllAsync();
+        // showModal = false;
+        StateHasChanged();
+    }
+
+    private void EditarCategoria(int id)
+    {
+        categoriaSeleccionada = categorias?.FirstOrDefault(c => c.Id == id);
+        modoEdicion = true;
+        showModal = true;
+    }
+
+    private void EliminarCategoria(int id)
+    {
+        var categoria = categorias?.FirstOrDefault(c => c.Id == id);
+        if (categoria == null) return;
+
+        categoriaIdAEliminar = id;
+        nombreAEliminar = categoria.Descripcion;
+        showConfirmModal = true;
+    }
+
+    private async Task ConfirmarEliminacion()
+    {
+        await categoriaService.DeleteAsync(categoriaIdAEliminar);
+        categorias = await categoriaService.GetAllAsync();
+        showConfirmModal = false;
+        StateHasChanged();
+    }
+
+    private void CancelarEliminacion()
+    {
+        showConfirmModal = false;
+    }
+}

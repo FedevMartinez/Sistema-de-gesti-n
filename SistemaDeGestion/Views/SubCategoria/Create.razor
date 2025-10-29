@@ -1,0 +1,80 @@
+﻿@page "/subcategoria/create"
+@using Microsoft.AspNetCore.Components.Forms
+@using Services.Services
+@using Services.ViewModels
+@using SistemaGestion.Utils
+@inject SubCategoriaService SubCategoriaService
+
+<h3>@(subCategoria.Id == 0 ? "Nueva Subcategoría" : "Editar Subcategoría")</h3>
+
+<EditForm Model="@subCategoria" OnValidSubmit="GuardarAsync">
+    <DataAnnotationsValidator />
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Descripción</label>
+            <InputText class="form-control" @bind-Value="subCategoria.Descripcion" />
+            <ValidationMessage For="@(() => subCategoria.Descripcion)" />
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <label class="form-label">Código</label>
+            <InputText class="form-control" @bind-Value="subCategoria.Codigo" />
+            <ValidationMessage For="@(() => subCategoria.Codigo)" />
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <label class="form-label">Categoría</label>
+            <InputSelect class="form-control" @bind-Value="subCategoria.CategoriaId">
+                <option value="">Seleccione una categoría</option>
+                @foreach (var cat in Categorias)
+                {
+                    <option value="@cat.Id">@cat.Descripcion</option>
+                }
+            </InputSelect>
+            <ValidationMessage For="@(() => subCategoria.CategoriaId)" />
+        </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Guardar</button>
+    <button type="button" class="btn btn-secondary" @onclick="Cancelar">Cancelar</button>
+</EditForm>
+
+@code {
+    [Parameter] public SubCategoriaViewModel? SubCategoriaExistente { get; set; }
+    [Parameter] public IEnumerable<CategoriaViewModel> Categorias { get; set; } = new List<CategoriaViewModel>();
+
+    private SubCategoriaViewModel subCategoria = new();
+
+    [Parameter] public EventCallback OnSaved { get; set; }
+    [Parameter] public EventCallback OnCancel { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        if (SubCategoriaExistente != null)
+        {
+            subCategoria = new SubCategoriaViewModel
+                {
+                    Id = SubCategoriaExistente.Id,
+                    Descripcion = SubCategoriaExistente.Descripcion,
+                    Codigo = SubCategoriaExistente.Codigo,
+                    CategoriaId = SubCategoriaExistente.CategoriaId
+                };
+        }
+    }
+
+    private async Task GuardarAsync()
+    {
+        if (subCategoria.Id == 0)
+            await SubCategoriaService.CreateAsync(subCategoria);
+        else
+            await SubCategoriaService.UpdateAsync(subCategoria);
+
+        await OnSaved.InvokeAsync();
+    }
+
+    private async Task Cancelar()
+    {
+        await OnCancel.InvokeAsync();
+    }
+}

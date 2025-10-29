@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
 using Models.Context;
+using Repositories;
 using Repositories.Interface;
 using Repositories.Repository;
 using Services.Services;
@@ -9,7 +10,10 @@ using SistemaDeGestion.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<SistemaContext>(options =>
+//builder.Services.AddDbContext<SistemaContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("Base")));
+
+builder.Services.AddDbContextFactory<SistemaContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Base")));
 
 
@@ -21,6 +25,10 @@ builder.Services.AddAutoMapper(typeof(AutoMapping));
 
 builder.Services.AddScoped<IProductRepository, ProductoRepository>();
 builder.Services.AddScoped<IClienteProveedorRepository, ClienteProveedorRepository>();
+builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddScoped<ISubCategoriaRepository, SubCategoriaRepository>();
+builder.Services.AddScoped<CategoriaService>();
+builder.Services.AddScoped<SubCategoriaService>();
 
 builder.Services.AddHttpClient<ProductoService>();
 builder.Services.AddScoped<ProductoService>();
