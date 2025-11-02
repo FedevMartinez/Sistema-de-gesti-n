@@ -6,6 +6,7 @@ namespace SistemaGestion.Utils
     public class ClienteProveedorViewModel
     {
         public int Id { get; set; }
+        public bool? EsCliente { get; set; }
 
         [Required(ErrorMessage = "El nombre es obligatorio")]
         [StringLength(100, ErrorMessage = "El nombre no puede superar los 100 caracteres")]

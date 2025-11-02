@@ -11,6 +11,19 @@
     <DataAnnotationsValidator />
 
     <div class="row">
+
+        <div class="btn-group mb-3" role="group">
+            <input type="radio" class="btn-check" name="tipo" id="cliente" autocomplete="off"
+                   checked="@clienteProveedor.EsCliente" @onchange="() => clienteProveedor.EsCliente = true" />
+            <label class="btn btn-outline-primary" for="cliente">Cliente</label>
+
+            <input type="radio" class="btn-check" name="tipo" id="proveedor" autocomplete="off"
+                   checked="@(!clienteProveedor.EsCliente)" @onchange="() => clienteProveedor.EsCliente = false" />
+            <label class="btn btn-outline-primary" for="proveedor">Proveedor</label>
+        </div>
+
+
+
         <!-- Nombre -->
         <div class="col-md-4 mb-3">
             <label class="form-label">Nombre</label>
